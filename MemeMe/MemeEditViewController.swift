@@ -195,13 +195,13 @@ class MemeEditViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     @IBAction func cancelMeme(sender: UIBarButtonItem) {
-        self.navigationController?.popViewControllerAnimated(true)
+        navigationController?.popViewControllerAnimated(true)
     }
     
     @IBAction func doneEditing(sender: UIBarButtonItem) {
         saveMeme()
         updateSentMemes()
-        self.navigationController?.popViewControllerAnimated(true)
+        navigationController?.popViewControllerAnimated(true)
     }
     
     @IBAction func shareMeme(sender: UIBarButtonItem) {
@@ -254,7 +254,7 @@ class MemeEditViewController: UIViewController, UIImagePickerControllerDelegate,
     func keyboardWillShow(notification: NSNotification) {
         //shift meme view up only for bottomText
         if (bottomText.isFirstResponder()) {
-            view.frame.origin.y -= getKeyboardHeight(notification)
+            view.frame.origin.y = -getKeyboardHeight(notification)
         }
     }
     
