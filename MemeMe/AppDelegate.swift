@@ -13,9 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var memes = [Meme]()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        //example of how to pre-initialize memes for testing
+        //memes.append(Meme(topText: "TOP", bottomText: "BOTTOM", image: UIImage(named: "memes/IMG_0384.jpg"), finalImage: UIImage(named: "memes/IMG_0385.jpg")))
         return true
     }
 
